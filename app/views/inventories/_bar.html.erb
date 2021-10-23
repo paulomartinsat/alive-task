@@ -1,0 +1,13 @@
+<%= search_form_for @q do |f| %>
+    <h3> Filter by </h3>
+    <%= f.label :search_by_manufacturer %>
+    <%= f.search_field :manufacturer_cont %>
+    <br>
+    <%= f.label :search_by_model %>
+    <%= f.search_field :model_cont %>
+    <%=f.submit%>
+    <br>
+    <br>
+    <%= f.select :carrier_plan_type_cont, carrier_plans, include_blank: 'Select a plan'%>
+    <br>
+<%end%>
