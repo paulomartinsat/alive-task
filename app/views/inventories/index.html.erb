@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<h1>Inventories</h1>
+<%=render("bar",inventory: @inventory, url: inventories_path, method: :get)%>
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Manufacturer</th>
+          <th>Model</th>
+          <th>Color</th>
+          <th>Carrier plan type</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @inventories.each do |inventory| %>
+          <tr>
+            <td><%= inventory.manufacturer %></td>
+            <td><%= inventory.model %></td>
+            <td><%= inventory.color %></td>
+            <td><%= inventory.carrier_plan_type %></td>
+            <td><%= inventory.quantity %></td>
+            <td><%= inventory.price %></td>
+            <td><%= link_to 'Show', inventory %></td>
+            <td><%= button_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<br>
+
+<h3> To import a new file click in the link below</h3>
+<%=button_to "Upload page", upload_new_path %>
+<%= link_to "Back", :back %>
+<br>
+<br>
+<h3> To add data manually: </h3>
+<%= link_to 'New Inventory', new_inventory_path %>
