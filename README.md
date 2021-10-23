@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi, my name is Paulo and this is my code for the task. First of all, sorry for my delay, i had some issues on my computer and lost some files, but now itś complete.
+
+Thanks for the opportunity and let's go for the steps
 
 Things you may want to cover:
 
-* Ruby version
+Ruby version:3.0.0;
 
-* System dependencies
+Configuration => Rails 6.1.4.1;
 
-* Configuration
+Run bundle install, rails db:create, rails db:migrate;
 
-* Database creation
+Run yarn add bootstrap, yarn add popper.js;
 
-* Database initialization
+To test the file upload just selct a file on the upload page and then hit upload, after that, you will be redirected to the page to view your inventory;
 
-* How to run the test suite
+To run tests type rspec on the terminal;
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
