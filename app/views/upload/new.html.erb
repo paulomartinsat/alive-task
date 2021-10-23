@@ -1,0 +1,7 @@
+<h1>Import file</h1>
+<%= form_tag import_inventories_path, multipart: true do%>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload"%>
+<%end%>
+<br><br>
+<%= link_to "Back", :back %>
